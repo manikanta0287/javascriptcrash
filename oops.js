@@ -1,18 +1,19 @@
-//Constructor function
+//Class
 
-function Person(firstName, lastName, dob){
-    this.firstName = firstName;
-    this.lastName = lastName
-    this.dob = new Date(dob);
-    this.getBirthYear = function (){
+class Person{
+    constructor(firstName, lastName, dob){
+        this.firstName = firstName;
+        this.lastName = lastName
+        this.dob = new Date(dob);
+
+    }
+    getBirthYear(){
         return this.dob.getFullYear();
     }
-    this.getFullName = function(){
-        return `${this.firstName} ${this.lastName}`
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`;
     }
-    
 }
-
 
 //Instance Object
 
@@ -27,3 +28,5 @@ console.log( person2.dob.getFullYear());
 console.log(person1.getBirthYear());
 
 console.log(person1.getFullName());
+
+console.log(person1);
